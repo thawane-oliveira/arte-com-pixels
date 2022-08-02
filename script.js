@@ -9,7 +9,3 @@ quadrado2.style.backgroundColor = 'salmon';
 
 let quadrado3 = document.getElementsByClassName('color')[3];
 quadrado3.style.backgroundColor = '#7231A7';
-
-
-
-
