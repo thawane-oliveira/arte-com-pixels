@@ -22,3 +22,24 @@ function criaElemento() {
     paiDoPixel.appendChild(pixel);
   }
 } criaElemento();
+
+//
+
+window.onload = function() {
+    const corInicial = document.querySelector('.black');
+    corInicial.classList.add('selected');
+}
+
+
+//
+
+const clear = document.querySelector('#clear-board');
+const pixelColorido = document.querySelector('.pixel');
+
+ function limpaQuadro() {
+    clear.addEventListener('click', function(){
+        if (pixelColorido.style.backgroundColor !== white){
+            pixelColorido.style.backgroundColor === white
+        }
+    });
+ }
