@@ -25,21 +25,31 @@ function criaElemento() {
 
 //
 
-window.onload = function() {
-    const corInicial = document.querySelector('.black');
-    corInicial.classList.add('selected');
+window.onload = function () {
+  const corInicial = document.querySelector('.black');
+  corInicial.classList.add('selected');
+};
+
+//
+
+function removeColor () {
+  const corDescartada = document.getElementsByClassName('selected');
+  corDescartada[0].classList.remove('selected');
 }
 
+// function selectColor () {
+//     const corEscolhida = document.getElementsByClassName('selected');
+// }
 
 //
 
 const clear = document.querySelector('#clear-board');
 const pixelColorido = document.querySelector('.pixel');
 
- function limpaQuadro() {
-    clear.addEventListener('click', function(){
-        if (pixelColorido.style.backgroundColor !== white){
-            pixelColorido.style.backgroundColor === white
-        }
-    });
- }
+function limpaQuadro() {
+  clear.addEventListener('click', function () {
+    if (pixelColorido.style.backgroundColor !== 'white') {
+      pixelColorido.style.backgroundColor === 'white';
+    }
+  });
+} limpaQuadro();
