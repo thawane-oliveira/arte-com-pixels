@@ -45,16 +45,27 @@ for (let index = 0; index < coresDisponiveis.length; index += 1) {
     coresDisponiveis[index].addEventListener('click', selectColor)
 }
 
+//
+
+const quadradinho = document.querySelectorAll('.pixel');
+
+function mudaCor(event) {
+    const corSelecionada = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = corSelecionada;
+}
+
+for (let index = 0; index < quadradinho.length; index += 1) {
+    quadradinho[index].addEventListener('click', mudaCor)
+}
 
 // 9
 
 const clear = document.querySelector('#clear-board');
-const pixelColorido = document.querySelector('.pixel');
 
-function limpaQuadro() {
-    clear.addEventListener('click', function () {
-        if (pixelColorido.style.backgroundColor !== 'white') {
-            pixelColorido.style.backgroundColor === 'white';
-        }
-    });
-} limpaQuadro();
+function apagaCor(event) {
+    for (let index = 0; index < quadradinho.length; index += 1) {
+      quadradinho[index].style.backgroundColor = 'white';
+    }
+}
+
+clear.addEventListener('click', apagaCor)
