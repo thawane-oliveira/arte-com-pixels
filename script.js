@@ -1,14 +1,21 @@
 const quadrado0 = document.getElementsByClassName('color')[0];
 quadrado0.style.backgroundColor = 'black';
 
+function randomColor() {
+  const color1 = Math.round(Math.random() * 255);
+  const color2 = Math.round(Math.random() * 255);
+  const color3 = Math.round(Math.random() * 255);
+  return `rgb(${color1}, ${color2}, ${color3})`;
+}
+
 const quadrado1 = document.getElementsByClassName('color')[1];
-quadrado1.style.backgroundColor = 'yellowgreen';
+quadrado1.style.backgroundColor = randomColor();
 
 const quadrado2 = document.getElementsByClassName('color')[2];
-quadrado2.style.backgroundColor = 'salmon';
+quadrado2.style.backgroundColor = randomColor();
 
 const quadrado3 = document.getElementsByClassName('color')[3];
-quadrado3.style.backgroundColor = '#7231A7';
+quadrado3.style.backgroundColor = randomColor();
 
 const corInicial = document.querySelector('.black');
 corInicial.classList.add('selected');
