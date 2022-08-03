@@ -15,16 +15,19 @@ corInicial.classList.add('selected');
 
 //
 
-function criaElemento() {
-  for (let index = 0; index < 25; index += 1) {
+const boardPrincipal = document.querySelector('#pixel-board');
+
+function criaElemento(lado) {
+  for (let index = 0; index < lado * lado; index += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
+    boardPrincipal.style.width = `${46 * lado}px`;
 
     const paiDoPixel = document.getElementsByTagName('section')[1];
 
     paiDoPixel.appendChild(pixel);
   }
-} criaElemento();
+} criaElemento(5);
 
 //
 
@@ -71,18 +74,24 @@ clear.addEventListener('click', apagaCor);
 
 const inputVazio = document.querySelector('#board-size');
 const botaoVQV = document.querySelector('#generate-board');
-const boardPrincipal = document.querySelector('#pixel-board');
 
 function verificaInput() {
   if (inputVazio.value === '') {
-    alert('Board inválido!')
-  } else if (input.value.length > 0) {
-    for (let index = 0; index < input.value.length; index += 1) {
-      const pixel = document.createElement('div');
-      pixel.classList.add('pixel'); 
-  
-      boardPrincipal.appendChild(pixel);
+    alert('Board inválido!');
+    return;
   }
-}} 
+  if (inputVazio.value >= 5 && inputVazio.value <= 50) {
+    boardPrincipal.innerHTML = '';
+    criaElemento(inputVazio.value);
+    return;
+  }
+  if (inputVazio.value > 50) {
+    boardPrincipal.innerHTML = '';
+    criaElemento(50);
+    return;
+  }
+  boardPrincipal.innerHTML = '';
+  criaElemento(5);
+}
 
 botaoVQV.addEventListener('click', verificaInput);
