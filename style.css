@@ -1,8 +1,29 @@
+#title {
+  font-family: cursive;
+  color: lavenderblush;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:indianred;
+  text-shadow: black 1px 1px 15px;
+  font-size: 50px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .color {
   border: 1px solid black;
   width: 50px;
   height: 50px;
   display: inline-block;
+}
+
+#color-palette {
+  padding-bottom: 30px;
+  margin-left: 800px;
+}
+
+#botoes {
+  margin-left: 760px;
 }
 
 .pixel {
@@ -14,6 +35,11 @@
   margin: 2px;
 }
 
-/* #pixel-board {
-  width: 230px;
-} */
+#pixel-board {
+  padding-top: 30px;
+  margin-left: 800px;
+}
+
+body {
+  background-image: url('https://r4.wallpaperflare.com/wallpaper/726/889/74/jojo-s-bizarre-adventure-giorno-giovanna-minimalism-manga-hd-wallpaper-69a0f84d016a5d9b7637e81f40f1466d.jpg');
+}
