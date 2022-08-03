@@ -66,3 +66,23 @@ function apagaCor() {
 }
 
 clear.addEventListener('click', apagaCor);
+
+// 10
+
+const inputVazio = document.querySelector('#board-size');
+const botaoVQV = document.querySelector('#generate-board');
+const boardPrincipal = document.querySelector('#pixel-board');
+
+function verificaInput() {
+  if (inputVazio.value === '') {
+    alert('Board inválido!')
+  } else if (input.value.length > 0) {
+    for (let index = 0; index < input.value.length; index += 1) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel'); 
+  
+      boardPrincipal.appendChild(pixel);
+  }
+}} 
+
+botaoVQV.addEventListener('click', verificaInput);
